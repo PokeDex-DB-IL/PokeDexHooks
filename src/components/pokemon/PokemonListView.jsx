@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PokemonView from './PokemonView';
-import { Link } from 'react-router-dom';
+import styles from './PokemonViewList.css';
 
 
 // eslint-disable-next-line react/prop-types
 const PokemonListView = ({ pokemon }) => {
   const pokemonElements = pokemon.map(poke => (
-    <Link key={poke.id} to={`/pokemon/id/${poke.id}`}>
-      <li key={poke.id}>
-        <PokemonView { ...poke} />
-      </li>
-    </Link>
+    // eslint-disable-next-line max-len
+    <li key={poke.id}>
+      <PokemonView  { ...poke} />
+    </li>
+  
   ));
   return (
-    <ul>
+    <ul className={styles.List}>
       {pokemonElements}     
     </ul>
   );

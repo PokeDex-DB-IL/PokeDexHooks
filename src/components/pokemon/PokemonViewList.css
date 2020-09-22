@@ -1,0 +1,13 @@
+.List {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5em;
+    padding: 10px;
+}
+
+
+

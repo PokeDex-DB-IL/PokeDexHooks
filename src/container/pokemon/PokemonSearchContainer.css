@@ -1,0 +1,24 @@
+.Search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: rgb(66,86,166);
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 20px;
+    background-color:  rgba(108, 128, 138, 0.323);
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 8px 8px 18px rgb(161,158,158);
+}
+
+.Pokemon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    padding: 10px;
+    height: 12vh;
+}

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import PokemonListView from '../../components/pokemon/PokemonListView.jsx';
 import { useGetPokemonTypeHook } from '../../hooks/pokemon/getByTypeHook.jsx';
 import { useTypeHook } from '../../hooks/pokemon/TypeHook.jsx';
+import styles from './SelectorContainer.css';
 
 const SelectorContainer = () => {
   const [typeOfPokemon, setTypeOfPokemon] = useState([]);
@@ -17,7 +18,7 @@ const SelectorContainer = () => {
   const oneOrMorePokemon = sortedPokemon.length > 0;
   
   return (
-    <div>
+    <div className={styles.Sort}>
       <select onChange={handleChange}>
         <option value="">Sort by...</option>
         {
@@ -28,12 +29,12 @@ const SelectorContainer = () => {
             )
         }
       </select>
-      <section>
+      <section className={styles.Pokemon}>
         <button disabled={currentPage === 1 || !oneOrMorePokemon} name="previous" onClick={handleClick}>&lt;</button>
         {oneOrMorePokemon && currentPage } {oneOrMorePokemon && <> / </>} {oneOrMorePokemon && totalPages}
         <button disabled={currentPage === totalPages || !oneOrMorePokemon} name="next" onClick={handleClick}>&gt;</button>
-        {sortedPokemon &&  <PokemonListView pokemon={sortedPokemon}/> }
       </section>
+      {sortedPokemon &&  <PokemonListView pokemon={sortedPokemon}/> }
     </div>
   );
 };
