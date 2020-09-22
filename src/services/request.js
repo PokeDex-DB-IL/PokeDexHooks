@@ -1,10 +1,9 @@
 /* eslint-disable max-len */
 const NOBODY_METHODS = ['GET', 'DELETE'];
-const url = 'https://alchemy-pokedex.herokuapp.com/api/pokedex';
 
 const request = (path, method, body) => {
   // eslint-disable-next-line no-undef
-  return fetch(`${url}${path}`, {
+  return fetch(`${process.env.API_URL}${path}`, {
     method,
     headers: NOBODY_METHODS.includes(method) ? {} : { 'Content-Type': 'application/json' },
     // credentials: 'include',
