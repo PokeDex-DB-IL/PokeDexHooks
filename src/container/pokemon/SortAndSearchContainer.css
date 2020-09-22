@@ -1,0 +1,14 @@
+.SortContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: rgb(66,86,166);
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 20px;
+    background-color:  rgba(108, 128, 138, 0.323);
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 8px 8px 18px rgb(161,158,158);
+}

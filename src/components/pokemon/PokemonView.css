@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+.PokemonCard {
+    background-color: rgb(255,202,6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 15em;
+    height: 26em;
+    border: .5em;
+    margin: 15px;
+    padding: 10px;
+    border-style: solid;
+    border: rgb(66,86,166);
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 20px;
+    color: black;
+    text-shadow: .7px 1px 1.2px whitesmoke;
+    box-shadow: 8px 8px 18px black;
+    margin-bottom: 4em;
+   
+
+    img {
+        margin-bottom: 10px;
+        height: 24vh;
+        border: 2px;
+        border-style: solid;
+        border-top-color: rgb(239,64,54);
+        border-right-color: grey;
+        border-left-color: grey;
+        border-bottom-color: white;
+        border-radius: 50%;
+        background-color: rgb(66,86,166);
+        box-shadow: 8px 8px 18px black;
+        transition: transform .5s cubic-bezier(.70, .35, .41, .78);
+        transition-delay: .5s;
+    }
+    a {
+       
+        text-decoration: none;
+        :hover {
+            transform: scale(1.2);
+            color: green;
+        }
+    }
+
+}

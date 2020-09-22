@@ -2,6 +2,7 @@
 import React from 'react';
 import { useListPokemon } from '../../hooks/pokemon/PokemonListHook.jsx';
 import PokemonListView from '../../components/pokemon/PokemonListView.jsx';
+import styles from './PokemonListContainer.css';
 
 
 const PokemonListContainer = () => {
@@ -10,13 +11,13 @@ const PokemonListContainer = () => {
   if(loading) return <h1>Loading....</h1>;
   
   return (
-    <div>
+    <div className={styles.Pokemon}>
       <section>
         <button disabled={currentPage === 1} name="previous" onClick={handleClick}>&lt;</button>
         {currentPage} / {totalPages}
         <button disabled={currentPage === totalPages} name="next" onClick={handleClick}>&gt;</button>
       </section>
-      <PokemonListView pokemon={pokemon}/>
+      <PokemonListView className={styles.Pokemon} pokemon={pokemon}/>
     </div>
   );
 };
