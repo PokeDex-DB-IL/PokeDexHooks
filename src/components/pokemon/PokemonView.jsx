@@ -29,4 +29,5 @@ PokemonView.propTypes = {
   type1: PropTypes.string
 };
 
+
 export default PokemonView;
