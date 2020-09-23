@@ -3,6 +3,18 @@ import { useEffect, useState } from 'react';
 import { getAllPokemon } from '../../services/apiFetches';
 
 
+export const sortByPokemonName = (a, b) => {
+  const pokemon1 = a.name.toUpperCase();
+  const pokemon2 = b.name.toUpperCase();
+
+  let comparison = 0;
+  if(pokemon1 > pokemon2) return comparison = 1;
+  if(pokemon1 < pokemon2) return comparison = -1;
+
+  return comparison;
+
+}; 
+
 export const useListPokemon = () => {
 
   const [pokemon, setPokemon] = useState([]);
@@ -26,7 +38,8 @@ export const useListPokemon = () => {
         type1: result.type_1
       })))
       .then(result => {
-        setPokemon(result);
+        const alphabeticalPokemon = result.sort(sortByPokemonName);
+        setPokemon(alphabeticalPokemon);
         const totalPages = Math.ceil(result[0]?.count / result[0]?.perPage);
         setTotalPages(totalPages);
       })

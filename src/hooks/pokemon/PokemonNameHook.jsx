@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import { useState, useEffect } from 'react';
 import { fetchByName } from '../../services/apiFetches';
+import { sortByPokemonName } from './PokemonListHook';
 
 
 export const usePokemonNameHook = name => {
@@ -23,7 +24,8 @@ export const usePokemonNameHook = name => {
         type1: result.type_1
       })))
       .then(result => {
-        setPokemonByName(result);
+        const alphabeticalPokemon = result.sort(sortByPokemonName);
+        setPokemonByName(alphabeticalPokemon);
         const totalPages = Math.ceil(result[0]?.count / result[0]?.perPage);
         if(isNaN(totalPages)) return setTotalPages(0), setCurrentPage(0);
         setTotalPages(totalPages);
