@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+.Pokemon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: rgb(66,86,166);
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 20px;
+    background-color:  rgba(108, 128, 138, 0.323);
+    margin: 10px;
+    padding: 20px;
+    height: min-content;
+    box-shadow: 8px 8px 18px rgb(161,158,158);
+
+    img {
+        height: max-content;
+    } 
+
+}
+
+.backGround {
+    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/95/fc/30/95fc304b40461a9922bd1d3aff885496.png");
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.Name {
+    background-color: rgb(255,202,6);
+    margin: 2px;
+    border-radius: 20px;
+    width: 40vw;
+    text-align: center;
+    padding: .8em;
+    border: solid 2px rgb(66,86,166);;
+    font-family: 'Fjalla One', sans-serif;
+    color: black;
+    text-shadow: .7px 1px 1.2px whitesmoke;
+  
+    opacity: .9;
+}
+
+.Text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    background-color:rgb(255,202,6);
+    border: solid 2px rgb(66,86,166);;
+    border-radius: 20px;
+    font-family: 'Fjalla One', sans-serif;
+    color: black;
+    text-shadow: .7px 1px 1.2px whitesmoke;
+    margin: 5px;
+    padding: 10px;
+  
+    margin-bottom: 10px;
+    opacity: .9;
+}

@@ -15,7 +15,7 @@ const SelectorContainer = () => {
     setTypeOfPokemon({ filter: e.target.value });
   };
 
-  const oneOrMorePokemon = sortedPokemon.length > 0;
+  const oneOrMorePokemon = sortedPokemon.length > 0 ;
   
   return (
     <div className={styles.Sort}>
