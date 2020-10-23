@@ -7,6 +7,8 @@ import styles from './PokemonSearchContainer.css';
 
 const PokemonSearchContainer = () => {
   const [searchedPokemon, setSearchedPokemon] = useState('');
+
+
   const { pokemonByName, currentPage, totalPages, handleClick } = usePokemonNameHook(searchedPokemon);
 
   const oneOrMorePokemon = searchedPokemon.length > 0;

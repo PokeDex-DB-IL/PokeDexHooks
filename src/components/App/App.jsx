@@ -20,6 +20,5 @@ export default function App() {
       <Route path="/pokemon/search/" component={SortAndSearchContainer} />
       <Route  exact path="/pokemon/id/:id" component={PokemonContainer} />
     </Switch>
-
   </Router>;
 }
